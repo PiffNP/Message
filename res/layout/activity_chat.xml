@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+        
+    <ListView
+        android:id="@+id/messageListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chatParseLine"
+        android:layout_alignParentTop="true"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="3dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:transcriptMode="alwaysScroll" />
+
+    <View
+        android:id="@+id/chatParseLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/chatInput"
+        android:background="#7fd8d8d8" />
+    <LinearLayout
+        android:id="@+id/chatInput"
+		android:layout_alignParentBottom="true"
+    	android:focusable="true"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical" >
+	    
+	    <LinearLayout
+    	    android:id="@+id/chatInputBox"
+    	    android:focusableInTouchMode="true"
+    	    android:focusable="true"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:background="#ffffffff"
+    	    android:orientation="horizontal"
+    	    android:padding="4dp" >	
+		
+			<Button
+           		android:id="@+id/voiceButton"
+    	    	android:focusable="true"
+            	android:layout_gravity="bottom"
+            	android:layout_width="35dp"
+            	android:layout_height="35dp"
+            	android:layout_marginRight="3dp"
+            	android:background="@drawable/chatting_setmode_msg_btn" />
+        
+        	<EditText
+            	android:id="@+id/messageEditText"
+            	android:layout_width="0dp"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="1"
+            	android:hint="Please input text..."
+            	android:maxHeight="80dp"
+            	android:textSize="16sp" >
+        	</EditText>
+		
+        	<Button
+            	android:id="@+id/speakButton"
+	        	android:focusable="true"
+            	android:layout_gravity="bottom"
+            	android:visibility="gone" 
+            	android:layout_width="wrap_content"
+            	android:layout_height="35dp"
+            	android:layout_weight="1"
+            	android:text="Press to speak"
+            	android:textColor="#ffffffff"
+            	android:textSize="15sp"
+        	/>
+        
+        	<Button
+            	android:id="@+id/extraTypeButton"
+    	    	android:focusable="true"
+				android:layout_gravity="bottom"
+        	    android:layout_width="35dp"
+        	    android:layout_height="35dp"
+        	    android:layout_marginLeft="1dp"
+        	    android:layout_marginRight="2dp"
+        	    android:background="@drawable/chat_extra_type_btn"
+        	    android:paddingLeft="8dp"
+        	    android:paddingRight="8dp" />
+		
+        	<Button
+        	    android:id="@+id/sendButton"
+    		    android:focusable="true"
+        	    android:layout_gravity="bottom"
+        	    android:visibility="gone" 
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="35dp"
+        	    android:layout_marginLeft="1dp"
+        	    android:layout_marginRight="2dp"
+        	    android:text="Send"
+        	    android:textColor="#ffffffff"
+        	    android:textSize="15sp"
+        	    />
+    	</LinearLayout>
+    	
+	    <TableLayout
+            android:id="@+id/extraLayout"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="#f6f5f5"
+            >
+			
+	        <TableRow
+	            android:minHeight="70dp"
+	            >
+	            
+	            <RelativeLayout
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:layout_weight="1"
+				    >
+
+		            <ImageButton
+		                android:id="@+id/imageButton"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerHorizontal="true"
+		                android:layout_centerVertical="true"
+		                android:background="@drawable/picture_100"
+		                android:focusable="true"
+		                android:textColor="#ffffffff" />
+
+	            </RelativeLayout>
+	            
+	            <RelativeLayout
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:layout_weight="1"
+				    >
+
+		            <ImageButton
+		                android:id="@+id/cameraButton"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerHorizontal="true"
+		                android:layout_centerVertical="true"
+		                android:background="@drawable/white_camera_100"
+		                android:focusable="true"
+		                android:textColor="#ffffffff" />
+
+	            </RelativeLayout>
+	            
+	            <RelativeLayout
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:layout_weight="1"
+				    >
+
+		            <ImageButton
+		                android:id="@+id/locationButton"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerHorizontal="true"
+		                android:layout_centerVertical="true"
+		                android:background="@drawable/geo_fence_100"
+		                android:focusable="true"
+		                android:textColor="#ffffffff" />
+
+	            </RelativeLayout>
+
+			</TableRow>
+			<TableRow
+	            android:minHeight="70dp"
+	            >
+	            
+	            <RelativeLayout
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:layout_weight="1"
+				    >
+
+		            <ImageButton
+		                android:id="@+id/audioButton"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerHorizontal="true"
+		                android:layout_centerVertical="true"
+		                android:background="@drawable/microphone_100"
+		                android:focusable="true"
+		                android:textColor="#ffffffff" />
+
+	            </RelativeLayout>
+	            
+	            <RelativeLayout
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:layout_weight="1"
+				    >
+
+		            <ImageButton
+		                android:id="@+id/addButton"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerHorizontal="true"
+		                android:layout_centerVertical="true"
+		                android:background="@drawable/plus_100"
+		                android:focusable="true"
+		                android:textColor="#ffffffff" />
+
+	            </RelativeLayout>
+	            
+	            <RelativeLayout
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:layout_weight="1"
+				    >
+
+		            <ImageButton
+		                android:id="@+id/nullButton2"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerHorizontal="true"
+		                android:layout_centerVertical="true"
+		                android:background="#ffffffff"
+		                android:focusable="true"
+		                android:textColor="#ffffffff" />
+
+	            </RelativeLayout>
+			</TableRow>
+        </TableLayout>
+    	
+    </LinearLayout>
+
+</RelativeLayout>

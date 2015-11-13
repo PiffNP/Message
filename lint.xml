@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="NewApi" severity="ignore">
+        <ignore path="res/layout/activity_chat.xml" />
+        <ignore path="res/layout/item_listview.xml" />
+        <ignore path="src/com/ihs/demo/message_2013013306/SettingsFragment.java" />
+    </issue>
+    <issue id="UnusedAttribute">
+        <ignore path="res/layout/activity_photo.xml" />
+    </issue>
+</lint>

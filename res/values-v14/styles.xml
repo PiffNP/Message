@@ -1,0 +1,26 @@
+<resources>
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style>
+    <declare-styleable name="ZSwipeItem">
+        <attr name="drag_edge" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="top" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+        <attr name="horizontalSwipeOffset" format="dimension" />
+        <attr name="verticalSwipeOffset" format="dimension" />
+        <attr name="show_mode" format="enum">
+            <enum name="lay_down" value="0" />
+            <enum name="pull_out" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>
